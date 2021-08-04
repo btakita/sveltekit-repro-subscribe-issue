@@ -11,20 +11,20 @@ const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-    ssr: true,
-    // hydrate the <div id="svelte"> element in src/app.html
-    vite: {
-      optimizeDeps: {
-        // exclude: ['@ctx-core/object'],
-        exclude: ['node-fetch'].concat([...Object.keys(pkg.devDependencies)]),
-      },
-      ssr: {
-        // noExternal: ['@ctx-core/object']
-        noExternal: ['node-fetch'].concat([...Object.keys(pkg.devDependencies)])
-      },
-      plugins: [
-      ]
-    }
+		ssr: true,
+		// hydrate the <div id="svelte"> element in src/app.html
+		vite: {
+			optimizeDeps: {
+				// exclude: ['@ctx-core/object'],
+				exclude: ['node-fetch'].concat([...Object.keys(pkg.devDependencies)]),
+			},
+			ssr: {
+				// noExternal: ['@ctx-core/object']
+				noExternal: ['node-fetch'].concat([...Object.keys(pkg.devDependencies)])
+			},
+			plugins: [
+			]
+		}
 	}
 };
 
